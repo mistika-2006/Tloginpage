@@ -13,7 +13,8 @@ public class TestNGDemo {
 
         WebDriver driver = new EdgeDriver();
 
-        driver.get("file:///C:/Users/misti/OneDrive/Documents/Desktop/selenium%20test%202/login.html");
+        String path = System.getProperty("user.dir") + "/login.html";
+        driver.get("file:///" + path.replace("\\", "/"));
 
         driver.manage().window().maximize();
 
